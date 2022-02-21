@@ -430,9 +430,9 @@ function Home() {
       </div>
     </div>
   
-  
+    <div className="angleup">
     <a href="#top" data-target="html" className="scroll-to-target scroll-to-top"><i className="fa fa-angle-up"></i></a>
-
+    </div>
 
 
         </>

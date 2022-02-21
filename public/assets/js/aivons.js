@@ -330,8 +330,11 @@
 
     $(".main-menu__list").on("click", function (e) {
       // e.preventDefault();
-      $(".mobile-nav__wrapper").toggleClass("expanded");
-      $("body").toggleClass("locked");
+      if ($(".mobile-nav__wrapper").hasClass("expanded")){
+        $(".mobile-nav__wrapper").toggleClass("expanded");
+        $("body").toggleClass("locked");
+
+      }
     });
   }
   if ($(".sticky-header__content").length) {

@@ -174,15 +174,6 @@
     </div>
   </div>
 
-  <script>
-    //Smooth scrolling with links
-    $('a[href^=\\#]').on('click', function (event) {
-      event.preventDefault();
-      $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
-    });
-
-  </script>
-
 
 
   <!-- all JS files -->
@@ -216,6 +207,17 @@
   <script src="assets/js/aivons.js"></script>
 
   <script src="https://use.fontawesome.com/f8473d84a7.js"></script>
+
+    <script>
+    //Smooth scrolling with links
+    $('.angleup a[href^=\\#]').on('click', function (event) {
+      event.preventDefault();
+      $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+    });
+
+  </script>
+
+
 </body>
 
 </html>
