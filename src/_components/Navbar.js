@@ -1,26 +1,102 @@
-import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
-
+import React, { useState, useEffect } from "react";
+// import { Button } from './Button';
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
-    const [click, setClick] = useState(false);
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
-    const handleClick = () => setClick(!click);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  window.addEventListener("resize", showButton);
   return (
     <>
-        <nav className='navbar'>
-            <div className='navbar-container'>
-                <Link to="/" className='navbar-logo'>
-                    TRVL <i className='fab fa-typo3' />
-                </Link>
-                <div className='menu-icon' onClick={handleClick}>
-                    <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-                </div>
+      <header className="main-header clearfix">
+        <nav className="main-menu clearfix">
+          <div className="main-menu-wrapper">
+            <div className="main-menu-wrapper__left">
+              <div className="main-menu-wrapper__logo">
+                <a href="home">
+                  <img src="../assets/images/logo.png" alt="abc" />
+                </a>
+              </div>
+
+              <div className="main-menu-wrapper__main-menu">
+                <a href="/" className="mobile-nav__toggler">
+                  <span className="mobile-nav__toggler-bar"></span>
+                  <span className="mobile-nav__toggler-bar"></span>
+                  <span className="mobile-nav__toggler-bar"></span>
+                </a>
+
+                <ul className="main-menu__list text-dark">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a href="about">About</a>
+                  </li>
+                  <li>
+                    <a href="book">Book Staff</a>
+                  </li>
+                  <li>
+                    <a href="career">Career</a>
+                  </li>
+                  <li>
+                    <a href="contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
             </div>
+
+            <div className="main-menu-wrapper__right">
+              <div className="main-menu-wrapper__social-box">
+                <div className="main-menu-wrapper__social">
+                  <a
+                    href="https://www.linkedin.com/company/lifeline-recruitment"
+                    className="clr-dri"
+                    target="blank_"
+                  >
+                    <i className="fab fa-linkedin"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/lifelinerecuitment21/"
+                    target="blank_"
+                    className="clr-ins"
+                  >
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+              <div className="main-menu-wrapper__search-box">
+                <a href="/"
+                  className="main-menu-wrapper__search search-toggler icon-magnifying-glass1"></a>
+              </div>
+              <div className="main-menu-wrapper__phone-contact">
+                <p>Need help? Talk to us</p>
+                <a href="tel:+44 07450 158606">+44 07450 158606 </a>
+              </div>
+            </div>
+
+            {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
+          </div>
         </nav>
+      </header>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
