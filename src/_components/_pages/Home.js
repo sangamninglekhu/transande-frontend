@@ -1,6 +1,7 @@
 import React from "react";
 import '../../App.css';
-import { faLaptopCode, faShirt, faEye, faCubes } from "@fortawesome/free-solid-svg-icons";
+import '../../App.css';
+import { faLaptopCode, faShirt, faEye, faCubes, faChartLine } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Home() {
     return (
@@ -18,7 +19,7 @@ function Home() {
             "prevEl": "#main-slider__swiper-button-prev"
         },
         "autoplay": {
-            "delay": 5000
+            "delay": 7000
         }}'>
             <div className="swiper-wrapper">
                 <div className="swiper-slide">
@@ -77,8 +78,8 @@ function Home() {
         </div>
     </section>
 
-    <section className="industries">
-            <div className="container">
+    <section className="industries" id="industries">
+            <div className="container" >
                 <div className="row">
                     <div className="col-xl-7 col-lg-6">
                         <div className="section-title text-left" style={{color: '#2f4f4f'}}>
@@ -125,57 +126,280 @@ function Home() {
             </div>
         </section>
 
-        <section className="services-one">
+        <section className="services-one" id="services">
             <div className="container">
                 <div className="section-title text-center">
                     <h2 className="section-title__title">Services we offer</h2>
-                    <span className="section-title__tagline">The best service company in the world</span>
+                    <span className="section-title__tagline">Bring you the best from the best</span>
                 </div>
                 <div className="row">
                     <div className="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="300ms">
                         <div className="services-one__single">
                             <div className="services-one__img">
-                                <img src="assets/images/services/services-1-1.jpg" alt="" />
+                                <img src="assets/images/services/services1-1.jpg" alt="" />
                             </div>
                             <div className="services-one__content">
-                                <h3 className="services-one__title"><a href="consumer-product.html">consumer product</a>
+                                <h3 className="services-one__title"><a href="consumer-product.html">Scale</a>
                                 </h3>
-                                <p className="services-one__text">Lorem ipsum is simmply free sed qui magni dolores eos qui
-                                    voluptatem sequi nesciunt eque porro.</p>
-                                <a href="consumer-product.html" className="services-one__btn">Read More</a>
+                                <p className="services-one__text">We make your presence in the digital world stand outline
+                                and bring you the customers from all around the globe.</p>
+                                {/* <a href="consumer-product.html" className="services-one__btn">Read More</a> */}
                             </div>
                         </div>
                     </div>
                     <div className="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="600ms">
                         <div className="services-one__single">
                             <div className="services-one__img">
-                                <img src="assets/images/services/services-1-2.jpg" alt="" />
+                                <img src="assets/images/services/services1-2.jpg" alt="" />
                             </div>
                             <div className="services-one__content">
-                                <h3 className="services-one__title"><a href="audit-marketing.html">Audit Marketing</a></h3>
-                                <p className="services-one__text">Lorem ipsum is simmply free sed qui magni dolores eos qui
-                                    voluptatem sequi nesciunt eque porro.</p>
-                                <a href="audit-marketing.html" className="services-one__btn">Read More</a>
+                                <h3 className="services-one__title"><a href="audit-marketing.html">Market</a></h3>
+                                <p className="services-one__text">Our strategic approach to marketing will put your brands
+                                in the pole position with strong branding.</p>
+                                {/* <a href="audit-marketing.html" className="services-one__btn">Read More</a> */}
                             </div>
                         </div>
                     </div>
                     <div className="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="900ms">
                         <div className="services-one__single">
                             <div className="services-one__img">
-                                <img src="assets/images/services/services-1-3.jpg" alt="" />
+                                <img src="assets/images/services/services1-3.jpg" alt="" />
                             </div>
                             <div className="services-one__content">
-                                <h3 className="services-one__title"><a href="banking-advising.html">Banking Advising</a>
+                                <h3 className="services-one__title"><a href="banking-advising.html">Deliver</a>
                                 </h3>
-                                <p className="services-one__text">Lorem ipsum is simmply free sed qui magni dolores eos qui
-                                    voluptatem sequi nesciunt eque porro.</p>
-                                <a href="banking-advising.html" className="services-one__btn">Read More</a>
+                                <p className="services-one__text">From inventory to delivery, a software that  works and performs a big chunk of your day-to-day task
+                                with a robust structure.</p>
+                                {/* <a href="banking-advising.html" className="services-one__btn">Read More</a> */}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
+        <section className="listen" id="faq">
+            <div className="container">
+                <div className="row">
+                    <div className="col-xl-6">
+                        <div className="listen__left">
+                            <h2 className="listen__title">We Listen to Our Customers</h2>
+                            <p className="listen__text">We believe that the product should not be how the founders envision 
+                            but how the customers want it to be.</p>
+                            <div className="listen__progress-wrap">
+                                <div className="listen__progress">
+                                    <div className="listen__progress-box">
+                                        <div className="circle-progress"
+                                            data-options='{ "value": 0.5,"thickness": 3,"emptyFill": "#ffffff","lineCap": "square", "size": 112, "fill": { "color": "#3c72fc" } }'>
+                                        </div>
+                                        <span>50%</span>
+                                    </div>
+                                    <div className="listen__progress-content">
+                                        <h3>Sustainable Products</h3>
+                                    </div>
+                                </div>
+                                <div className="listen__progress">
+                                    <div className="listen__progress-box">
+                                        <div className="circle-progress"
+                                            data-options='{ "value": 1,"thickness": 3,"emptyFill": "#ffffff","lineCap": "square", "size": 112, "fill": { "color": "#3c72fc" } }'>
+                                        </div>
+                                        <span>100%</span>
+                                    </div>
+                                    <div className="listen__progress-content">
+                                        <h3>Quality Service</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-6">
+                        <div className="listen__right">
+                            <div className="listen__right-faq">
+                                <div className="accrodion-grp" data-grp-name="faq-one-accrodion">
+                                    <div className="accrodion">
+                                        <div className="accrodion-title">
+                                            <h4>How it works?</h4>
+                                        </div>
+                                        <div className="accrodion-content">
+                                            <div className="inner">
+                                                <p>Upon successful coversation, we put your elected products for sale on our platform with a lot of controls with you to customize.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="accrodion active">
+                                        <div className="accrodion-title">
+                                            <h4>How to track my inventory?</h4>
+                                        </div>
+                                        <div className="accrodion-content">
+                                            <div className="inner">
+                                                <p>We provide our customers with their own brand portal where they can login, check, track, and and update thier inventory.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="accrodion">
+                                        <div className="accrodion-title">
+                                            <h4>How secure is my data?</h4>
+                                        </div>
+                                        <div className="accrodion-content">
+                                            <div className="inner">
+                                                <p>Transande is built by leveraging blockchain technology which has the strongest encryption and security in the digital world..</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className="team-one" id="team">
+            <div className="team-one__container">
+                <div className="section-title text-center">
+                    <h2 className="section-title__title">Meet the team</h2>
+                    <span className="section-title__tagline">People that bring you results</span>
+                </div>
+                <div className="row justify-content-md-center">
+                    <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0ms"
+                        data-wow-duration="1500ms">
+                        <div className="team-one__single">
+                            <div className="team-one__img">
+                                <img src="assets/images/team/pratik.jpg" alt="" />
+                                <div className="team-one__hover-content">
+                                    <h3 className="team-one__name">Pratik Dahal</h3>
+                                    <p className="team-one__title">Co-founder and CEO</p>
+                                </div>
+                                <div className="team-one__bottom">
+                                    <div className="team-one__btn-box">
+                                        <a href="https://www.linkedin.com/in/pratik-dahal-a6a047182/" className="team-one__btn">Contact Me</a>
+                                    </div>
+                                    <div className="team-one__social">
+                                        <a href="https://www.linkedin.com/in/pratik-dahal-a6a047182/" className="clr-ins"><i className="fab fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms"
+                        data-wow-duration="1500ms">
+                        <div className="team-one__single">
+                            <div className="team-one__img">
+                                <img src="assets/images/team/sangam.jpg" alt="" />
+                                <div className="team-one__hover-content">
+                                    <h3 className="team-one__name">Sangam Ninglekhu</h3>
+                                    <p className="team-one__title">Co-founder and Managing Director</p>
+                                </div>
+                                <div className="team-one__bottom">
+                                    <div className="team-one__btn-box">
+                                        <a href="https://www.linkedin.com/in/sangamninglekhu/" className="team-one__btn">Contact Me</a>
+                                    </div>
+                                    <div className="team-one__social">
+                                        <a href="https://www.linkedin.com/in/sangamninglekhu/" className="clr-fb"><i className="fab fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <footer className="site-footer">
+            <div className="site-footer-shape wow slideInRight" data-wow-delay="100ms" data-wow-duration="3500ms"
+                style={{backgroundImage: 'url(assets/images/shapes/footer-shape.png)'}}></div>
+            <div className="container">
+                <div className="site-footer__top">
+                    <div className="row">
+                        <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                            <div className="footer-widget__column footer-widget__about">
+                                <div className="footer-widget__about-logo">
+                                    <a href="/"><img src="assets/images/logo.png" alt=""/></a>
+                                </div>
+                                <p className="footer-widget__text">Transande Apparel Pvt. Ltd..</p>
+                                <ul className="list-unstyled footer-widget__contact-list">
+                                    <li>
+                                        <div className="icon">
+                                            <i className="fas fa-phone-square-alt"></i>
+                                        </div>
+                                        <div className="text">
+                                            <p><a href="tel:+92-666-888-0000">+977 9862679570</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="icon">
+                                            <i className="fas fa-envelope"></i>
+                                        </div>
+                                        <div className="text">
+                                            <p><a href="mailto:needhelp@company.com">contact@transande.com</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="icon">
+                                            <i className="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div className="text">
+                                            <p>Srijananagar, Bhaktapur</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <div className="footer-widget__column footer-widget__explore clearfix">
+                                <h3 className="footer-widget__title">Explore</h3>
+                                <ul className="footer-widget__explore-list list-unstyled">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="#industries">Industries</a></li>
+                                    <li><a href="#services">Services</a></li>
+                                    <li><a href="#faq">FAQ</a></li>
+                                    <li><a href="#team">Team</a></li>
+                                </ul>
+                                {/* <ul className="footer-widget__explore-list footer-widget__explore-list-two list-unstyled">
+                                    <li><a href="contact.html">Support</a></li>
+                                    <li><a href="faq.html">Terms of use</a></li>
+                                    <li><a href="about.html">Privacy policy</a></li>
+                                    <li><a href="faq.html">Help</a></li>
+                                </ul> */}
+                            </div>
+                        </div>
+                        <div className="col-xl-5 col-lg-6 col-md-8 wow fadeInUp" data-wow-delay="400ms">
+                            <div className="footer-widget__column footer-widget__newsletter">
+                                <h3 className="footer-widget__title footer-widget__title-news">Newsletter</h3>
+                                <form className="footer-widget__newsletter-form">
+                                    <p className="footer-widget__newsletter-text">Subsrcibe for latest articles and
+                                        resources</p>
+                                    <div className="footer-widget__newsletter-input-box">
+                                        <input type="email" placeholder="Email address" name="email"/>
+                                        <button type="submit" className="footer-widget__newsletter-btn">Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="site-footer-bottom">
+                    <div className="row">
+                        <div className="col-xl-12">
+                            <div className="site-footer-bottom__inner">
+                                <div className="site-footer-bottom__left">
+                                    <p>© Copyright 2019 by <a href="/">Transande</a> | Built by <a href="https://bitmosys.com/" target="_blank" rel="noreferrer">Bitmosys Labs</a></p>
+                                </div>
+                                <div className="site-footer__social">
+                                    <a href="https://www.facebook.com/Transande-Apparel-105269985429551" className="clr-fb"><i className="fab fa-facebook"></i></a>
+                                    <a href="/" className="clr-dri"><i className="fab fa-linkedin"></i></a>
+                                    <a href="/" className="clr-ins"><i className="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
 
 
 

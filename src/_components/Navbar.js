@@ -47,16 +47,16 @@ function Navbar() {
                     <a href="/">Home</a>
                   </li>
                   <li>
-                    <a href="about">About</a>
+                    <a href="#industries">Industries</a>
                   </li>
                   <li>
-                    <a href="book">Book Staff</a>
+                    <a href="#services">Services</a>
                   </li>
                   <li>
-                    <a href="career">Career</a>
+                    <a href="#faq">FAQ</a>
                   </li>
                   <li>
-                    <a href="contact">Contact</a>
+                    <a href="#team">Team</a>
                   </li>
                 </ul>
               </div>
