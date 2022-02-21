@@ -1,11 +1,11 @@
 import React from "react";
 import '../../App.css';
-import '../../App.css';
 import { faLaptopCode, faShirt, faEye, faCubes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Home() {
     return (
         <>
+
         <section className="main-slider main-slider-two">
         <div className="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
         "effect": "fade",
@@ -39,7 +39,7 @@ function Home() {
                                     <h2>Transande <br/> Apparel
                                     </h2>
                                     <p>Allevate Your Business</p>
-                                    <a href="about.html" className="thm-btn">Collaborate Now</a>
+                                    <a href="mailto:contact@transande.com" className="thm-btn">Collaborate Now</a>
                                 </div>
                             </div>
                         </div>
@@ -57,10 +57,10 @@ function Home() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="main-slider__content text-center">
-                                <h2>Scale Up<br/> Fast
+                                <h2>Scale Up <br/>Your Brand
                                     </h2>
                                     <p>Expand your Customer</p>
-                                    <a href="about.html" className="thm-btn">Collaborate Now</a>
+                                    <a href="mailto:contact@transande.com" className="thm-btn">Collaborate Now</a>
                                 </div>
                             </div>
                         </div>
@@ -326,7 +326,7 @@ function Home() {
                                             <i className="fas fa-phone-square-alt"></i>
                                         </div>
                                         <div className="text">
-                                            <p><a href="tel:+92-666-888-0000">+977 9862679570</a></p>
+                                            <p><a href="tel:+977 9862679570">+977 9862679570</a></p>
                                         </div>
                                     </li>
                                     <li>
@@ -334,7 +334,7 @@ function Home() {
                                             <i className="fas fa-envelope"></i>
                                         </div>
                                         <div className="text">
-                                            <p><a href="mailto:needhelp@company.com">contact@transande.com</a></p>
+                                            <p><a href="mailto:contact@transande.com">contact@transande.com</a></p>
                                         </div>
                                     </li>
                                     <li>
@@ -399,6 +399,40 @@ function Home() {
                 </div>
             </div>
         </footer>
+
+        <div className="mobile-nav__wrapper">
+    <div className="mobile-nav__overlay mobile-nav__toggler"></div>
+    <div className="mobile-nav__content">
+      <span className="mobile-nav__close mobile-nav__toggler"><i className="fa fa-times"></i></span>
+  
+      <div className="logo-box">
+        <a href="index.html" aria-label="logo image"><img src="assets/images/rsz_logo-only.png" width="75"
+          alt="" /></a>
+        </div>
+        <div className="mobile-nav__container"></div>
+  
+        <ul className="mobile-nav__contact list-unstyled">
+          <li>
+            <i className="fa fa-envelope"></i>
+            <a href="mailto:needhelp@company.com">contact@lifelinerecruitment.com</a>
+          </li>
+          <li>
+            <i className="fa fa-phone-alt"></i>
+            <a href="tel:+44 07450 158606">+44 07450 158606</a>
+          </li>
+        </ul>
+        <div className="mobile-nav__top">
+          <div className="mobile-nav__social">
+            {/* <a href="https://www.linkedin.com/company/lifeline-recruitment"  target="blank_" className="fab fa-linkedin"></a>
+            <a href="https://www.instagram.com/lifelinerecuitment21" target="blank_" className="fab fa-instagram"></a> */}
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <a href="#top" data-target="html" className="scroll-to-target scroll-to-top"><i className="fa fa-angle-up"></i></a>
+
 
 
 

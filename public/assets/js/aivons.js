@@ -183,7 +183,7 @@
       $("html, body").animate({
           scrollTop: $(target).offset().top,
         },
-        1000
+        10
       );
 
       return false;
@@ -327,6 +327,12 @@
     let navContent = document.querySelector(".main-menu__list").outerHTML;
     let mobileNavContainer = document.querySelector(".mobile-nav__container");
     mobileNavContainer.innerHTML = navContent;
+
+    $(".main-menu__list").on("click", function (e) {
+      // e.preventDefault();
+      $(".mobile-nav__wrapper").toggleClass("expanded");
+      $("body").toggleClass("locked");
+    });
   }
   if ($(".sticky-header__content").length) {
     let navContent = document.querySelector(".main-menu").innerHTML;

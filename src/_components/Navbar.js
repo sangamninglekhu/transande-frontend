@@ -15,7 +15,7 @@ function Navbar() {
               </div>
 
               <div className="main-menu-wrapper__main-menu">
-                <a href="/" className="mobile-nav__toggler">
+                <a href="#" className="mobile-nav__toggler">
                   <span className="mobile-nav__toggler-bar"></span>
                   <span className="mobile-nav__toggler-bar"></span>
                   <span className="mobile-nav__toggler-bar"></span>
@@ -49,6 +49,13 @@ function Navbar() {
                     className="clr-dri"
                     target="blank_"
                   >
+                    <i className="fab fa-facebook"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/lifeline-recruitment"
+                    className="clr-dri"
+                    target="blank_"
+                  >
                     <i className="fab fa-linkedin"></i>
                   </a>
                   <a
@@ -60,20 +67,22 @@ function Navbar() {
                   </a>
                 </div>
               </div>
-              <div className="main-menu-wrapper__search-box">
-                <a href="/"
-                  className="main-menu-wrapper__search search-toggler icon-magnifying-glass1">{null}</a>
+              <div className="main-menu-wrapper__search-box ">
+                {/* <a href="/"
+                  className="main-menu-wrapper__search search-toggler icon-magnifying-glass1">{null}</a> */}
               </div>
               <div className="main-menu-wrapper__phone-contact">
                 <p>Need help? Talk to us</p>
-                <a href="tel:+44 07450 158606">+44 07450 158606 </a>
+                <a href="tel:+977 9862679570">+977 9862679570</a>
               </div>
             </div>
-
-            {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
           </div>
         </nav>
       </header>
+
+      <div className="stricky-header stricked-menu main-menu">
+        <div className="sticky-header__content"></div>
+      </div>
     </>
   );
 }
