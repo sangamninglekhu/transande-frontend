@@ -1,7 +1,7 @@
 import React from "react";
 import '../../App.css';
 import '../../App.css';
-import { faLaptopCode, faShirt, faEye, faCubes, faChartLine } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode, faShirt, faEye, faCubes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Home() {
     return (

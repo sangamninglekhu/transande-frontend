@@ -1,28 +1,7 @@
-import React, { useState, useEffect } from "react";
-// import { Button } from './Button';
-import { Link } from "react-router-dom";
+import React from "react";
 import "./Navbar.css";
 
 function Navbar() {
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener("resize", showButton);
   return (
     <>
       <header className="main-header clearfix">
@@ -30,7 +9,7 @@ function Navbar() {
           <div className="main-menu-wrapper">
             <div className="main-menu-wrapper__left">
               <div className="main-menu-wrapper__logo">
-                <a href="home">
+                <a href="/">
                   <img src="../assets/images/logo.png" alt="abc" />
                 </a>
               </div>
@@ -83,7 +62,7 @@ function Navbar() {
               </div>
               <div className="main-menu-wrapper__search-box">
                 <a href="/"
-                  className="main-menu-wrapper__search search-toggler icon-magnifying-glass1"></a>
+                  className="main-menu-wrapper__search search-toggler icon-magnifying-glass1">{null}</a>
               </div>
               <div className="main-menu-wrapper__phone-contact">
                 <p>Need help? Talk to us</p>
