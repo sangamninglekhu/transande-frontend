@@ -273,10 +273,10 @@ function Home() {
                                 </div>
                                 <div className="team-one__bottom">
                                     <div className="team-one__btn-box">
-                                        <a href="https://www.linkedin.com/in/pratik-dahal-a6a047182/" className="team-one__btn">Contact Me</a>
+                                        <a href="https://www.linkedin.com/in/pratik-dahal-a6a047182/" className="team-one__btn" target="_blank" rel="noreferrer">Contact Me</a>
                                     </div>
                                     <div className="team-one__social">
-                                        <a href="https://www.linkedin.com/in/pratik-dahal-a6a047182/" className="clr-ins"><i className="fab fa-linkedin"></i></a>
+                                        <a href="https://www.linkedin.com/in/pratik-dahal-a6a047182/" className="clr-ins" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -289,14 +289,34 @@ function Home() {
                                 <img src="assets/images/team/sangam.jpg" alt="" />
                                 <div className="team-one__hover-content">
                                     <h3 className="team-one__name">Sangam Ninglekhu</h3>
+                                    <p className="team-one__title">Co-founder and Chairman</p>
+                                </div>
+                                <div className="team-one__bottom">
+                                    <div className="team-one__btn-box">
+                                        <a href="https://www.linkedin.com/in/sangamninglekhu/" className="team-one__btn" target="_blank" rel="noreferrer">Contact Me</a>
+                                    </div>
+                                    <div className="team-one__social">
+                                        <a href="https://www.linkedin.com/in/sangamninglekhu/" className="clr-fb" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms"
+                        data-wow-duration="1500ms">
+                        <div className="team-one__single">
+                            <div className="team-one__img">
+                                <img src="assets/images/team/sandip.jpg" alt="" />
+                                <div className="team-one__hover-content">
+                                    <h3 className="team-one__name">Sandip Gupta</h3>
                                     <p className="team-one__title">Co-founder and Managing Director</p>
                                 </div>
                                 <div className="team-one__bottom">
                                     <div className="team-one__btn-box">
-                                        <a href="https://www.linkedin.com/in/sangamninglekhu/" className="team-one__btn">Contact Me</a>
+                                        <a href="https://www.linkedin.com/in/sandipgupta1/" className="team-one__btn" target="_blank" rel="noreferrer">Contact Me</a>
                                     </div>
                                     <div className="team-one__social">
-                                        <a href="https://www.linkedin.com/in/sangamninglekhu/" className="clr-fb"><i className="fab fa-linkedin"></i></a>
+                                        <a href="https://www.linkedin.com/in/sandipgupta1/" className="clr-fb" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
                                     </div>
                                 </div>
                             </div>
