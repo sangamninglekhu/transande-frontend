@@ -1525,6 +1525,8 @@ body.boxed-wrapper {
 .main-slider {
     overflow: hidden;
     position: relative;
+    max-height: 100vh;
+
 }
 
 .main-slider .swiper-slide {
@@ -1694,7 +1696,7 @@ body.boxed-wrapper {
     font-size: 90px;
     line-height: 105px;
     text-transform: uppercase;
-    padding-top: 32px;
+    padding-top: 0px;
 }
 
 .main-slider .thm-btn {
@@ -1899,8 +1901,8 @@ body.boxed-wrapper {
 }
 
 .main-slider-two .container {
-    padding-top: 322px;
-    padding-bottom: 240px;
+    padding-top: 35vh;
+    padding-bottom: 50vh;
 }
 
 .main-slider-two-shape-1 {
@@ -1951,8 +1953,8 @@ body.boxed-wrapper {
 }
 
 .main-slider-two h2 {
-    font-size: 110px;
-    line-height: 100px;
+    font-size: 75px;
+    line-height: 80px;
     margin-bottom: 26px;
     transform: translateY(-120px);
 }
