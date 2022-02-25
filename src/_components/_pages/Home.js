@@ -556,10 +556,11 @@ function Home() {
                         <Form.Field>
                           <input
                             placeholder="Full Name"
+                            name="fullname"
                             type="text"
                             {...register("fullName", {
                               required: true,
-                              maxLength: 10,
+                              maxLength: 20,
                             })}
                           />
                         </Form.Field>
@@ -576,6 +577,7 @@ function Home() {
                         <Form.Field>
                           <input
                             placeholder="Email"
+                            name="email"
                             type="email"
                             {...register("email", {
                               required: true,
@@ -598,6 +600,7 @@ function Home() {
                         <Form.Field>
                           <input
                             placeholder="Subject"
+                            name="subject"
                             type="text"
                             {...register("subject", {
                               required: true,
@@ -605,7 +608,7 @@ function Home() {
                             })}
                           />
                         </Form.Field>
-                        {errors.fullName && <p>Please check the Subject</p>}
+                        {errors.subject && <p>Please check the Subject</p>}
 
                         {/* <input type="text" placeholder="Your name" name="name"> */}
                         <div className="comment-form__icon">
@@ -619,6 +622,7 @@ function Home() {
                         <Form.Field>
                           <textarea
                             placeholder="Message"
+                            name="message"
                             type="text"
                             {...register("message", {
                               required: true,
@@ -813,41 +817,6 @@ function Home() {
           </div>
         </div>
       </footer>
-
-      <div className="mobile-nav__wrapper">
-        <div className="mobile-nav__overlay mobile-nav__toggler"></div>
-        <div className="mobile-nav__content">
-          <span className="mobile-nav__close mobile-nav__toggler">
-            <i className="fa fa-times"></i>
-          </span>
-
-          <div className="logo-box">
-            <a href="index.html" aria-label="logo image">
-              <img src="assets/images/rsz_logo-only.png" width="75" alt="" />
-            </a>
-          </div>
-          <div className="mobile-nav__container"></div>
-
-          <ul className="mobile-nav__contact list-unstyled">
-            <li>
-              <i className="fa fa-envelope"></i>
-              <a href="mailto:needhelp@company.com">
-                contact@lifelinerecruitment.com
-              </a>
-            </li>
-            <li>
-              <i className="fa fa-phone-alt"></i>
-              <a href="tel:+44 07450 158606">+44 07450 158606</a>
-            </li>
-          </ul>
-          <div className="mobile-nav__top">
-            <div className="mobile-nav__social">
-              {/* <a href="https://www.linkedin.com/company/lifeline-recruitment"  target="blank_" className="fab fa-linkedin"></a>
-            <a href="https://www.instagram.com/lifelinerecuitment21" target="blank_" className="fab fa-instagram"></a> */}
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div className="angleup">
         <a
