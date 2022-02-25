@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../App.css";
 import {
   faLaptopCode,
@@ -10,16 +10,51 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Form } from "semantic-ui-react";
 import { useForm } from "react-hook-form";
 /* eslint-disable */
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 function Home() {
   const {
     register,
-    handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
+
+  const [state, setState] = useState({
+    fullname: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) =>
+    setState({ ...state, [e.target.name]: e.target.value });
+
+  const handleSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...state }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+    e.preventDefault();
   };
+
+  //   const onSubmit = (data) => {
+  //     fetch("/", {
+  //         method: "POST",
+  //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //         body: encode({ "form-name": "contact", ...this.state })
+  //       })
+  //         .then(() => alert("Success!"))
+  //         .catch(error => alert(error));
+
+  //       e.preventDefault();
+  //     console.log(data);
+  //   };
 
   return (
     <>
@@ -547,7 +582,7 @@ function Home() {
               <div className="message-box__right">
                 <Form
                   name="contact"
-                  onSubmit={handleSubmit(onSubmit)}
+                  onSubmit={handleSubmit}
                   className="comment-one__form contact-form-validated"
                 >
                   <div className="row">
@@ -558,13 +593,15 @@ function Home() {
                             placeholder="Full Name"
                             name="fullname"
                             type="text"
-                            {...register("fullName", {
+                            value={state.fullname}
+                            onChange={handleChange}
+                            {...register("fullname", {
                               required: true,
                               maxLength: 20,
                             })}
                           />
                         </Form.Field>
-                        {errors.fullName && <p>Please check the Full Name</p>}
+                        {errors.fullname && <p>Please check the Full Name</p>}
 
                         {/* <input type="text" placeholder="Your name" name="name"> */}
                         <div className="comment-form__icon">
@@ -579,6 +616,8 @@ function Home() {
                             placeholder="Email"
                             name="email"
                             type="email"
+                            value={state.email}
+                            onChange={handleChange}
                             {...register("email", {
                               required: true,
                               pattern:
@@ -602,6 +641,8 @@ function Home() {
                             placeholder="Subject"
                             name="subject"
                             type="text"
+                            value={state.subject}
+                            onChange={handleChange}
                             {...register("subject", {
                               required: true,
                               maxLength: 20,
@@ -624,6 +665,8 @@ function Home() {
                             placeholder="Message"
                             name="message"
                             type="text"
+                            value={state.message}
+                            onChange={handleChange}
                             {...register("message", {
                               required: true,
                               maxLength: 200,
