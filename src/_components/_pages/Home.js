@@ -32,16 +32,44 @@ function Home() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  
   const onSubmit = (e) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...state }),
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Your message has been successfully sent."))
       .catch((error) => alert(error));
     return false;
   };
+
+
+  const [state2, setState2] = useState({
+    email2: "",
+  });
+
+  const handleChange2 = (e) =>
+    setState2({ ...state2, [e.target.name]: e.target.value });
+
+    const {
+      register: register2,
+      handleSubmit: handleSubmit2,
+      formState: { errors: errors2 },
+    } = useForm();
+  
+  const onSubmit2 = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "newsletter", ...state2 }),
+    })
+      .then(() => alert("You are successfully subscribed to the newsletter now."))
+      .catch((error) => alert(error));
+    return false;
+  };
+
+
 
   return (
     <>
@@ -590,10 +618,6 @@ function Home() {
                         </Form.Field>
                         {errors.fullname && <p>Please check the Full Name</p>}
 
-                        {/* <input type="text" placeholder="Your name" name="name"> */}
-                        <div className="comment-form__icon">
-                          <i className="far fa-user-circle"></i>
-                        </div>
                       </div>
                     </div>
                     <div className="col-xl-6">
@@ -614,10 +638,6 @@ function Home() {
                         </Form.Field>
                         {errors.email && <p>Please check the Full Name</p>}
 
-                        {/* <input type="text" placeholder="Your name" name="name"> */}
-                        <div className="comment-form__icon">
-                          <i className="far fa-user-circle"></i>
-                        </div>
                       </div>
                     </div>
 
@@ -638,10 +658,6 @@ function Home() {
                         </Form.Field>
                         {errors.subject && <p>Please check the Subject</p>}
 
-                        {/* <input type="text" placeholder="Your name" name="name"> */}
-                        <div className="comment-form__icon">
-                          <i className="far fa-user-circle"></i>
-                        </div>
                       </div>
                     </div>
 
@@ -666,9 +682,6 @@ function Home() {
                             characters.
                           </p>
                         )}
-                        <div className="comment-form__icon">
-                          <i className="far fa-comment"></i>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -791,7 +804,44 @@ function Home() {
                   <h3 className="footer-widget__title footer-widget__title-news">
                     Newsletter
                   </h3>
-                  <form className="footer-widget__newsletter-form">
+                  <Form
+                    name="newsletter"
+                    onSubmit={handleSubmit2(onSubmit2)}
+                    className="footer-widget__newsletter-form"
+                  >
+                    <p className="footer-widget__newsletter-text">
+                      Subsrcibe for latest articles and resources
+                    </p>
+                    <div className="footer-widget__newsletter-input-box">
+                      <Form.Field>
+                        <input
+                          placeholder="Email"
+                          name="email2"
+                          type="email"
+                          {...register2("email2", {
+                            required: true,
+                            pattern:
+                              /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                            onChange: handleChange2,
+                          })}
+                          value={state2.email2}
+                        />
+                      </Form.Field>
+
+                      {/* <input type="text" placeholder="Your name" name="name"> */}
+                    <button
+                      type="submit"
+                      className="footer-widget__newsletter-btn"
+                    >
+                      Register
+                    </button>
+                    </div>
+                    {errors2.email2 && <p>Please check the Email</p>}
+
+
+                  </Form>
+
+                  {/* <form className="footer-widget__newsletter-form">
                     <p className="footer-widget__newsletter-text">
                       Subsrcibe for latest articles and resources
                     </p>
@@ -808,7 +858,7 @@ function Home() {
                         Register
                       </button>
                     </div>
-                  </form>
+                  </form> */}
                 </div>
               </div>
             </div>
