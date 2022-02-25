@@ -55,6 +55,10 @@ body.locked {
     overflow: hidden;
 }
 
+form p{
+    color: #dc3545;
+}
+
 a {
     color: var(--thm-gray);
 }
@@ -286,7 +290,7 @@ body.boxed-wrapper {
     animation-fill-mode: both;
     -webkit-animation-name: flipInY;
     animation-name: flipInY;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 2s;
     animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;

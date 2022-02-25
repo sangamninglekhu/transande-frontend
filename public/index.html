@@ -83,6 +83,13 @@
 </head>
 
 <body>
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="fullname" />
+    <input type="email" name="email" />
+    <input type="text" name="subject" />
+    <textarea name="message"></textarea>
+  </form>
+  
 
   <div class="preloader">
     <div class="preloader__image"></div>
@@ -118,6 +125,9 @@
                 </li>
                 <li>
                   <a href="#team">Team</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
                 </li>
               </ul>
             </div>
