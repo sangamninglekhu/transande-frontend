@@ -17,11 +17,6 @@ const encode = (data) => {
 };
 
 function Home() {
-  const {
-    register,
-    formState: { errors },
-  } = useForm();
-
   const [state, setState] = useState({
     fullname: "",
     email: "",
@@ -32,7 +27,12 @@ function Home() {
   const handleChange = (e) =>
     setState({ ...state, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (e) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -40,21 +40,8 @@ function Home() {
     })
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
-    e.preventDefault();
+    return false;
   };
-
-  //   const onSubmit = (data) => {
-  //     fetch("/", {
-  //         method: "POST",
-  //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //         body: encode({ "form-name": "contact", ...this.state })
-  //       })
-  //         .then(() => alert("Success!"))
-  //         .catch(error => alert(error));
-
-  //       e.preventDefault();
-  //     console.log(data);
-  //   };
 
   return (
     <>
@@ -582,7 +569,7 @@ function Home() {
               <div className="message-box__right">
                 <Form
                   name="contact"
-                  onSubmit={handleSubmit}
+                  onSubmit={handleSubmit(onSubmit)}
                   className="comment-one__form contact-form-validated"
                 >
                   <div className="row">
@@ -593,12 +580,12 @@ function Home() {
                             placeholder="Full Name"
                             name="fullname"
                             type="text"
-                            value={state.fullname}
-                            onChange={handleChange}
                             {...register("fullname", {
                               required: true,
                               maxLength: 20,
+                              onChange: handleChange,
                             })}
+                            value={state.fullname}
                           />
                         </Form.Field>
                         {errors.fullname && <p>Please check the Full Name</p>}
@@ -616,13 +603,13 @@ function Home() {
                             placeholder="Email"
                             name="email"
                             type="email"
-                            value={state.email}
-                            onChange={handleChange}
                             {...register("email", {
                               required: true,
                               pattern:
                                 /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                              onChange: handleChange,
                             })}
+                            value={state.email}
                           />
                         </Form.Field>
                         {errors.email && <p>Please check the Full Name</p>}
@@ -641,12 +628,12 @@ function Home() {
                             placeholder="Subject"
                             name="subject"
                             type="text"
-                            value={state.subject}
-                            onChange={handleChange}
                             {...register("subject", {
                               required: true,
                               maxLength: 20,
+                              onChange: handleChange,
                             })}
+                            value={state.subject}
                           />
                         </Form.Field>
                         {errors.subject && <p>Please check the Subject</p>}
@@ -665,12 +652,12 @@ function Home() {
                             placeholder="Message"
                             name="message"
                             type="text"
-                            value={state.message}
-                            onChange={handleChange}
                             {...register("message", {
                               required: true,
                               maxLength: 200,
+                              onChange: handleChange,
                             })}
+                            value={state.message}
                           ></textarea>
                         </Form.Field>
                         {errors.message && (
