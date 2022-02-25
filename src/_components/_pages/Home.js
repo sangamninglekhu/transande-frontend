@@ -409,9 +409,9 @@ function Home() {
                                     <p>© Copyright 2019 by <a href="/">Transande</a> | Built by <a href="https://bitmosys.com/" target="_blank" rel="noreferrer">Bitmosys Labs</a></p>
                                 </div>
                                 <div className="site-footer__social">
-                                    <a href="https://www.facebook.com/Transande-Apparel-105269985429551" className="clr-fb"><i className="fab fa-facebook"></i></a>
-                                    <a href="/" className="clr-dri"><i className="fab fa-linkedin"></i></a>
-                                    <a href="/" className="clr-ins"><i className="fab fa-instagram"></i></a>
+                                    {/* <a href="https://www.facebook.com/Transande-Apparel-105269985429551" className="clr-fb"><i className="fab fa-facebook"></i></a> */}
+                                    <a href="https://www.linkedin.com/company/transande" className="clr-dri" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
+                                    {/* <a href="/" className="clr-ins"><i className="fab fa-instagram"></i></a> */}
                                 </div>
                             </div>
                         </div>
@@ -451,7 +451,7 @@ function Home() {
     </div>
   
     <div className="angleup">
-    <a href="#top" data-target="html" className="scroll-to-target scroll-to-top"><i className="fa fa-angle-up"></i></a>
+    <a href="/#" data-target="html" className="scroll-to-target scroll-to-top"><i className="fa fa-angle-up"></i></a>
     </div>
 
 
