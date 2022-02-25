@@ -115,7 +115,7 @@ function Home() {
                       </h2>
                       <p>Allevate Your Business</p>
                       <a
-                        href="mailto:contact@transande.com"
+                        href="#contact"
                         className="thm-btn"
                       >
                         Collaborate Now
@@ -149,7 +149,7 @@ function Home() {
                       </h2>
                       <p>Expand your Customer</p>
                       <a
-                        href="mailto:contact@transande.com"
+                        href="#contact"
                         className="thm-btn"
                       >
                         Collaborate Now
@@ -391,7 +391,7 @@ function Home() {
                       <div className="accrodion-content">
                         <div className="inner">
                           <p>
-                            Upon successful coversation, we put your elected
+                            Upon successful conversation, we put your elected
                             products for sale on our platform with a lot of
                             controls with you to customize.
                           </p>
@@ -405,9 +405,9 @@ function Home() {
                       <div className="accrodion-content">
                         <div className="inner">
                           <p>
-                            We provide our customers with their own brand portal
+                            We provide brands with their own portal
                             where they can login, check, track, and and update
-                            thier inventory.
+                            their inventory.
                           </p>
                         </div>
                       </div>
