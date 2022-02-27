@@ -616,7 +616,7 @@ function Home() {
                             value={state.fullname}
                           />
                         </Form.Field>
-                        {errors.fullname && <p>Please check the Full Name</p>}
+                        {errors.fullname && <p>Full name is required and should not exceed 20 characters.</p>}
 
                       </div>
                     </div>
@@ -636,7 +636,7 @@ function Home() {
                             value={state.email}
                           />
                         </Form.Field>
-                        {errors.email && <p>Please check the Full Name</p>}
+                        {errors.email && <p>Email is required and should be valid.</p>}
 
                       </div>
                     </div>
@@ -656,7 +656,7 @@ function Home() {
                             value={state.subject}
                           />
                         </Form.Field>
-                        {errors.subject && <p>Please check the Subject</p>}
+                        {errors.subject && <p>Subject is required and should not exceed 20 characters.</p>}
 
                       </div>
                     </div>
@@ -836,7 +836,7 @@ function Home() {
                       Register
                     </button>
                     </div>
-                    {errors2.email2 && <p>Please check the Email</p>}
+                    {errors2.email2 && <p>Email is required and should be valid.</p>}
 
 
                   </Form>
