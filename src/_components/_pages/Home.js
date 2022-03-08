@@ -745,8 +745,8 @@ function Home() {
                       </div>
                       <div className="text">
                         <p>
-                          <a href="mailto:contact@transande.com">
-                            contact@transande.com
+                          <a href="mailto:info@transande.com">
+                            info@transande.com
                           </a>
                         </p>
                       </div>
