@@ -810,7 +810,7 @@ function Home() {
                     className="footer-widget__newsletter-form"
                   >
                     <p className="footer-widget__newsletter-text">
-                      Subsrcibe for latest articles and resources
+                      Subscribe for latest articles and resources
                     </p>
                     <div className="footer-widget__newsletter-input-box">
                       <Form.Field>
