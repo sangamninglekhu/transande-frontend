@@ -210,7 +210,7 @@ function Home() {
                 <FontAwesomeIcon icon={faShirt} />
               </div>
               <h3 className="industries__title">
-                <a href="banking-advising.html">Apparel</a>
+                <a href={void(0)}>Apparel</a>
               </h3>
               <p className="industries__text">
                 Hub for chain of ethical and sustainable clothing brands.
@@ -225,7 +225,7 @@ function Home() {
                 <FontAwesomeIcon icon={faEye} />
               </div>
               <h3 className="industries__title">
-                <a href="business-growth.html">Cosmetics </a>
+                <a href={void(0)}>Cosmetics </a>
               </h3>
               <p className="industries__text">
                 Beauty products from trusted brands.
@@ -240,7 +240,7 @@ function Home() {
                 <FontAwesomeIcon icon={faCubes} />
               </div>
               <h3 className="industries__title">
-                <a href="financial-advice.html"> Blockchain</a>
+                <a href={void(0)}> Blockchain</a>
               </h3>
               <p className="industries__text">
                 Next-gen application with transparency and security.
@@ -255,7 +255,7 @@ function Home() {
                 <FontAwesomeIcon icon={faLaptopCode} />
               </div>
               <h3 className="industries__title">
-                <a href="marketing-rule.html">Software</a>
+                <a href={void(0)}>Software</a>
               </h3>
               <p className="industries__text">
                 All-in-one platform for brands at low cost.
@@ -284,7 +284,7 @@ function Home() {
                 </div>
                 <div className="services-one__content">
                   <h3 className="services-one__title">
-                    <a href="consumer-product.html">Scale</a>
+                    <a href={void(0)}>Scale</a>
                   </h3>
                   <p className="services-one__text">
                     We make your presence in the digital world stand outline and
@@ -304,7 +304,7 @@ function Home() {
                 </div>
                 <div className="services-one__content">
                   <h3 className="services-one__title">
-                    <a href="audit-marketing.html">Market</a>
+                    <a href={void(0)}>Market</a>
                   </h3>
                   <p className="services-one__text">
                     Our strategic approach to marketing will put your brands in
@@ -324,7 +324,7 @@ function Home() {
                 </div>
                 <div className="services-one__content">
                   <h3 className="services-one__title">
-                    <a href="banking-advising.html">Deliver</a>
+                    <a href={void(0)}>Deliver</a>
                   </h3>
                   <p className="services-one__text">
                     From inventory to delivery, a software that works and
