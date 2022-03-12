@@ -280,7 +280,7 @@ function Home() {
             >
               <div className="services-one__single">
                 <div className="services-one__img">
-                  <img src="assets/images/services/services1-1.jpg" alt="" />
+                  <img src="assets/images/services/services1-1.png" alt="" />
                 </div>
                 <div className="services-one__content">
                   <h3 className="services-one__title">
@@ -300,7 +300,7 @@ function Home() {
             >
               <div className="services-one__single">
                 <div className="services-one__img">
-                  <img src="assets/images/services/services1-2.jpg" alt="" />
+                  <img src="assets/images/services/services1-2.png" alt="" />
                 </div>
                 <div className="services-one__content">
                   <h3 className="services-one__title">
@@ -320,7 +320,7 @@ function Home() {
             >
               <div className="services-one__single">
                 <div className="services-one__img">
-                  <img src="assets/images/services/services1-3.jpg" alt="" />
+                  <img src="assets/images/services/services1-3.png" alt="" />
                 </div>
                 <div className="services-one__content">
                   <h3 className="services-one__title">

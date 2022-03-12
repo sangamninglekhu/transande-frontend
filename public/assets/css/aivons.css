@@ -4118,7 +4118,7 @@ body.boxed-wrapper {
 
 .services-one__img>img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    mix-blend-mode: normal;
     transition: all 500ms ease;
     transform: scale(1);
 }
