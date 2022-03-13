@@ -320,8 +320,9 @@ function Home() {
                     <a href={void 0}>Deliver</a>
                   </h3>
                   <p className="services-one__text">
-                    From inventory to delivery, a robust software that strealines your works and
-                    performs a big chunk of your day-to-day.
+                    From inventory to delivery, a robust software that
+                    strealines your works and performs a big chunk of your
+                    day-to-day.
                   </p>
                   {/* <a href="banking-advising.html" className="services-one__btn">Read More</a> */}
                 </div>
@@ -383,8 +384,9 @@ function Home() {
                       <div className="accrodion-content">
                         <div className="inner">
                           <p>
-                            We put your selected products for sale on our platform with a lot of
-                            controls for you to customize. 
+                            We put your selected products for sale on our
+                            platform with a lot of controls for you to
+                            customize.
                           </p>
                         </div>
                       </div>
@@ -397,8 +399,8 @@ function Home() {
                         <div className="inner">
                           <p>
                             We provide brands with their own portal where they
-                            can login, check, track, update their
-                            inventory, and many more.
+                            can login, check, track, update their inventory, and
+                            many more.
                           </p>
                         </div>
                       </div>
@@ -880,7 +882,24 @@ function Home() {
                     </p>
                   </div>
                   <div className="site-footer__social">
-                    {/* <a href="https://www.facebook.com/Transande-Apparel-105269985429551" className="clr-fb"><i className="fab fa-facebook"></i></a> */}
+                    {/* <a href="https://www.facebook.com/Transande-Apparel-105269985429551" className="clr-fb"><i className="fab fa-instagram"></i></a> */}
+                    <a
+                      href="https://www.instagram.com/transandeofficial/"
+                      className="clr-ins"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i className="fab fa-instagram"></i>
+                    </a>
+
+                    <a
+                      href="https://www.facebook.com/Transande-Apparel-105269985429551"
+                      class="clr-fb"
+                      target="_blank"
+                    >
+                      <i class="fab fa-facebook"></i>
+                    </a>
+
                     <a
                       href="https://www.linkedin.com/company/transande"
                       className="clr-dri"
@@ -889,7 +908,6 @@ function Home() {
                     >
                       <i className="fab fa-linkedin"></i>
                     </a>
-                    {/* <a href="/" className="clr-ins"><i className="fab fa-instagram"></i></a> */}
                   </div>
                 </div>
               </div>
