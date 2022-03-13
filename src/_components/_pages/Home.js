@@ -187,8 +187,8 @@ function Home() {
             <div className="col-xl-5 col-lg-6">
               <div className="industries__top-text-box">
                 <p className="industries__top-text">
-                  We are starting with following industries at first with plan
-                  to gradually expand the range.{" "}
+                  We are starting with the following industries first with a
+                  plan to extend to a much broader range in the future.{" "}
                 </p>
               </div>
             </div>
@@ -206,7 +206,7 @@ function Home() {
                 <a href={void 0}>Apparel</a>
               </h3>
               <p className="industries__text">
-                Hub for chain of ethical and sustainable clothing brands.
+                Hub for a chain of genuine clothing brands from Nepal.
               </p>
             </li>
             <li
@@ -251,7 +251,7 @@ function Home() {
                 <a href={void 0}>Software</a>
               </h3>
               <p className="industries__text">
-                All-in-one platform for brands at low cost.
+                All-in-one platform for brands and customers.
               </p>
             </li>
           </ul>
@@ -347,9 +347,9 @@ function Home() {
                     <div className="listen__progress-box">
                       <div
                         className="circle-progress"
-                        data-options='{ "value": 0.5,"thickness": 3,"emptyFill": "#ffffff","lineCap": "square", "size": 112, "fill": { "color": "#3c72fc" } }'
+                        data-options='{ "value": 0.25,"thickness": 3,"emptyFill": "#ffffff","lineCap": "square", "size": 112, "fill": { "color": "#3c72fc" } }'
                       ></div>
-                      <span>50%</span>
+                      <span>25%</span>
                     </div>
                     <div className="listen__progress-content">
                       <h3>Sustainable Products</h3>
@@ -568,12 +568,31 @@ function Home() {
                 </div>
                 <div className="message-box__social">
                   <a
+                    href="https://www.instagram.com/transandeofficial/"
+                    className="clr-ins"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="fab fa-instagram"></i>
+                  </a>
+
+                  <a
+                    href="https://www.facebook.com/Transande-Apparel-105269985429551"
+                    class="clr-fb"
+                    target="_blank"
+                  >
+                    <i class="fab fa-facebook"></i>
+                  </a>
+
+                  <a
                     href="https://www.linkedin.com/company/transande"
+                    className="clr-dri"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <i className="fab fa-linkedin"></i>
                   </a>
+
                   {/* <a href="/#" className="clr-fb">
                     <i className="fab fa-facebook"></i>
                   </a>
