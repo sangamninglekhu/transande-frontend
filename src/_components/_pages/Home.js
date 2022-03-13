@@ -32,7 +32,7 @@ function Home() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  
+
   const onSubmit = (e) => {
     fetch("/", {
       method: "POST",
@@ -44,7 +44,6 @@ function Home() {
     return false;
   };
 
-
   const [state2, setState2] = useState({
     email2: "",
   });
@@ -52,24 +51,24 @@ function Home() {
   const handleChange2 = (e) =>
     setState2({ ...state2, [e.target.name]: e.target.value });
 
-    const {
-      register: register2,
-      handleSubmit: handleSubmit2,
-      formState: { errors: errors2 },
-    } = useForm();
-  
+  const {
+    register: register2,
+    handleSubmit: handleSubmit2,
+    formState: { errors: errors2 },
+  } = useForm();
+
   const onSubmit2 = (e) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "newsletter", ...state2 }),
     })
-      .then(() => alert("You are successfully subscribed to the newsletter now."))
+      .then(() =>
+        alert("You are successfully subscribed to the newsletter now.")
+      )
       .catch((error) => alert(error));
     return false;
   };
-
-
 
   return (
     <>
@@ -114,10 +113,7 @@ function Home() {
                         Transande <br /> Apparel
                       </h2>
                       <p>Allevate Your Business</p>
-                      <a
-                        href="#contact"
-                        className="thm-btn"
-                      >
+                      <a href="#contact" className="thm-btn">
                         Collaborate Now
                       </a>
                     </div>
@@ -148,10 +144,7 @@ function Home() {
                         Your Brand
                       </h2>
                       <p>Expand your Customer</p>
-                      <a
-                        href="#contact"
-                        className="thm-btn"
-                      >
+                      <a href="#contact" className="thm-btn">
                         Collaborate Now
                       </a>
                     </div>
@@ -210,7 +203,7 @@ function Home() {
                 <FontAwesomeIcon icon={faShirt} />
               </div>
               <h3 className="industries__title">
-                <a href={void(0)}>Apparel</a>
+                <a href={void 0}>Apparel</a>
               </h3>
               <p className="industries__text">
                 Hub for chain of ethical and sustainable clothing brands.
@@ -225,7 +218,7 @@ function Home() {
                 <FontAwesomeIcon icon={faEye} />
               </div>
               <h3 className="industries__title">
-                <a href={void(0)}>Cosmetics </a>
+                <a href={void 0}>Cosmetics </a>
               </h3>
               <p className="industries__text">
                 Beauty products from trusted brands.
@@ -240,7 +233,7 @@ function Home() {
                 <FontAwesomeIcon icon={faCubes} />
               </div>
               <h3 className="industries__title">
-                <a href={void(0)}> Blockchain</a>
+                <a href={void 0}> Blockchain</a>
               </h3>
               <p className="industries__text">
                 Next-gen application with transparency and security.
@@ -255,7 +248,7 @@ function Home() {
                 <FontAwesomeIcon icon={faLaptopCode} />
               </div>
               <h3 className="industries__title">
-                <a href={void(0)}>Software</a>
+                <a href={void 0}>Software</a>
               </h3>
               <p className="industries__text">
                 All-in-one platform for brands at low cost.
@@ -284,10 +277,10 @@ function Home() {
                 </div>
                 <div className="services-one__content">
                   <h3 className="services-one__title">
-                    <a href={void(0)}>Scale</a>
+                    <a href={void 0}>Scale</a>
                   </h3>
                   <p className="services-one__text">
-                    We make your presence in the digital world stand outline and
+                    We make your presence in the digital world stand out and
                     bring you the customers from all around the globe.
                   </p>
                   {/* <a href="consumer-product.html" className="services-one__btn">Read More</a> */}
@@ -304,11 +297,11 @@ function Home() {
                 </div>
                 <div className="services-one__content">
                   <h3 className="services-one__title">
-                    <a href={void(0)}>Market</a>
+                    <a href={void 0}>Market</a>
                   </h3>
                   <p className="services-one__text">
-                    Our strategic approach to marketing will put your brands in
-                    the pole position with strong branding.
+                    Our strategic marketing approach will put your brand in the
+                    pole position to reach your goals more efficiently.
                   </p>
                   {/* <a href="audit-marketing.html" className="services-one__btn">Read More</a> */}
                 </div>
@@ -324,12 +317,11 @@ function Home() {
                 </div>
                 <div className="services-one__content">
                   <h3 className="services-one__title">
-                    <a href={void(0)}>Deliver</a>
+                    <a href={void 0}>Deliver</a>
                   </h3>
                   <p className="services-one__text">
-                    From inventory to delivery, a software that works and
-                    performs a big chunk of your day-to-day task with a robust
-                    structure.
+                    From inventory to delivery, a robust software that strealines your works and
+                    performs a big chunk of your day-to-day.
                   </p>
                   {/* <a href="banking-advising.html" className="services-one__btn">Read More</a> */}
                 </div>
@@ -391,9 +383,8 @@ function Home() {
                       <div className="accrodion-content">
                         <div className="inner">
                           <p>
-                            Upon successful conversation, we put your elected
-                            products for sale on our platform with a lot of
-                            controls with you to customize.
+                            We put your selected products for sale on our platform with a lot of
+                            controls for you to customize. 
                           </p>
                         </div>
                       </div>
@@ -405,9 +396,9 @@ function Home() {
                       <div className="accrodion-content">
                         <div className="inner">
                           <p>
-                            We provide brands with their own portal
-                            where they can login, check, track, and and update
-                            their inventory.
+                            We provide brands with their own portal where they
+                            can login, check, track, update their
+                            inventory, and many more.
                           </p>
                         </div>
                       </div>
@@ -421,7 +412,7 @@ function Home() {
                           <p>
                             Transande is built by leveraging blockchain
                             technology which has the strongest encryption and
-                            security in the digital world..
+                            security in the digital world.
                           </p>
                         </div>
                       </div>
@@ -616,8 +607,12 @@ function Home() {
                             value={state.fullname}
                           />
                         </Form.Field>
-                        {errors.fullname && <p>Full name is required and should not exceed 20 characters.</p>}
-
+                        {errors.fullname && (
+                          <p>
+                            Full name is required and should not exceed 20
+                            characters.
+                          </p>
+                        )}
                       </div>
                     </div>
                     <div className="col-xl-6">
@@ -636,8 +631,9 @@ function Home() {
                             value={state.email}
                           />
                         </Form.Field>
-                        {errors.email && <p>Email is required and should be valid.</p>}
-
+                        {errors.email && (
+                          <p>Email is required and should be valid.</p>
+                        )}
                       </div>
                     </div>
 
@@ -656,8 +652,12 @@ function Home() {
                             value={state.subject}
                           />
                         </Form.Field>
-                        {errors.subject && <p>Subject is required and should not exceed 20 characters.</p>}
-
+                        {errors.subject && (
+                          <p>
+                            Subject is required and should not exceed 20
+                            characters.
+                          </p>
+                        )}
                       </div>
                     </div>
 
@@ -829,16 +829,16 @@ function Home() {
                       </Form.Field>
 
                       {/* <input type="text" placeholder="Your name" name="name"> */}
-                    <button
-                      type="submit"
-                      className="footer-widget__newsletter-btn"
-                    >
-                      Register
-                    </button>
+                      <button
+                        type="submit"
+                        className="footer-widget__newsletter-btn"
+                      >
+                        Register
+                      </button>
                     </div>
-                    {errors2.email2 && <p>Email is required and should be valid.</p>}
-
-
+                    {errors2.email2 && (
+                      <p>Email is required and should be valid.</p>
+                    )}
                   </Form>
 
                   {/* <form className="footer-widget__newsletter-form">
